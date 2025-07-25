@@ -78,6 +78,3 @@ This project is open source under the MIT License.
 
 ---
 
-✅ Customize it fully before deployment!
-
-Happy coding! 🚀

@@ -209,9 +209,27 @@
     .hero-avatar {
       width: 240px; height: 240px;
       border-radius: 24px;
-      object-fit: cover;
-      border: 2px solid var(--border);
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(124,106,255,0.18), rgba(255,106,154,0.12));
       box-shadow: 0 0 60px rgba(124,106,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .hero-avatar-inner h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.45rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.6px;
+    }
+
+    .hero-avatar-inner p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
     }
 
     .hero-stats {
@@ -392,6 +410,54 @@
 
     .timeline-item ul { padding-left: 18px; }
     .timeline-item li { font-size: 0.875rem; color: var(--muted); margin-bottom: 6px; }
+
+    /* PUBLICATION */
+    #publication { background: var(--bg); }
+
+    .publication-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .publication-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
+
+    .publication-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* ACHIEVEMENTS */
+    #achievements { background: var(--surface); }
+
+    .achievement-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .achievement-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .achievement-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .achievement-card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
 
     /* PROJECTS */
     #projects { background: var(--bg); }
@@ -608,8 +674,10 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#publication">Publication</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#achievements">Achievements</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#certifications">Certs</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -626,33 +694,38 @@
       <div class="hero-tag">Available for opportunities</div>
       <h1>
         Hi, I'm <span class="name">Murugan A</span>
-        <span class="role">AI & Data Science Engineer</span>
+        <span class="role">Final-Year AI & Data Science Student</span>
       </h1>
-      <p class="hero-desc">Pre-Final year B.Tech student building real-world AI systems, responsive web apps, and data-driven solutions. Comfortable across the full stack — from Python backends to React frontends.</p>
+      <p class="hero-desc">Final-year B.Tech student with hands-on experience in machine learning, computer vision, and full-stack development, plus an accepted IEEE conference paper. Strong problem-solver with 265+ coding problems solved.</p>
       <div class="hero-btns">
         <a href="#projects" class="btn-primary">View Projects</a>
         <a href="mailto:thenmozhimurugan984@gmail.com" class="btn-outline">Get in Touch</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
-          <div class="stat-num">4+</div>
-          <div class="stat-label">Projects Built</div>
+          <div class="stat-num">4</div>
+          <div class="stat-label">Featured Projects</div>
         </div>
         <div class="stat">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Internships</div>
+          <div class="stat-num">265+</div>
+          <div class="stat-label">Problems Solved</div>
         </div>
         <div class="stat">
-          <div class="stat-num">8.12</div>
+          <div class="stat-num">8.08</div>
           <div class="stat-label">CGPA</div>
         </div>
         <div class="stat">
-          <div class="stat-num">6+</div>
-          <div class="stat-label">Certifications</div>
+          <div class="stat-num">IEEE</div>
+          <div class="stat-label">Accepted Paper</div>
         </div>
       </div>
     </div>
-    <img src="MURUGAN.jpg" alt="Murugan A" class="hero-avatar"/>
+    <div class="hero-avatar" aria-label="Murugan A profile card">
+      <div class="hero-avatar-inner">
+        <h3>Murugan A</h3>
+        <p>AI & Data Science<br/>Chennai, India<br/>Machine Learning · Full Stack · Computer Vision</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -663,37 +736,37 @@
     <h2 class="section-title" style="text-align:left; margin-bottom:40px;">About Me</h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>I'm a final-year B.Tech student in Artificial Intelligence and Data Science at St. Joseph's College of Engineering, Chennai. I enjoy building things that actually work — from AI-powered travel safety systems to pixel-accurate React clones.</p>
-        <p>My stack spans Python, React, Flask, and OpenCV. I've done internships in Java development, data visualization at Tata, and cloud computing at Microsoft via AICTE — all while maintaining a CGPA of 8.12.</p>
-        <p>I care about writing clean code, learning fast, and shipping projects that solve real problems.</p>
+        <p>I'm a final-year B.Tech student in Artificial Intelligence & Data Science at St. Joseph's College of Engineering, Chennai, with a CGPA of 8.08. I focus on machine learning, computer vision, and full-stack application development.</p>
+        <p>I have an accepted IEEE conference paper on a multi-modal edge-cloud framework for urban travel safety prediction, where I proposed CAMEC using YOLOv8, LSTM, XGBoost, and an adaptive risk-learning module.</p>
+        <p>My work style is practical: build fast, validate with real data, and keep the user experience clear and responsive.</p>
       </div>
       <div class="about-highlights">
         <div class="highlight-item">
           <div class="highlight-icon"><i class="fas fa-brain"></i></div>
           <div>
-            <h4>AI & Machine Learning</h4>
-            <p>Python, OpenCV, LLaMA, Groq API, scikit-learn</p>
+            <h4>AI / ML</h4>
+            <p>Machine Learning, Deep Learning, CNNs, YOLOv8, MediaPipe</p>
           </div>
         </div>
         <div class="highlight-item">
           <div class="highlight-icon"><i class="fas fa-code"></i></div>
           <div>
-            <h4>Frontend Development</h4>
-            <p>React, Tailwind CSS, HTML/CSS, JavaScript</p>
+            <h4>Frontend & Web</h4>
+            <p>React, JavaScript, Tailwind CSS, Flask, FastAPI</p>
           </div>
         </div>
         <div class="highlight-item">
           <div class="highlight-icon"><i class="fas fa-server"></i></div>
           <div>
-            <h4>Backend & APIs</h4>
-            <p>Flask, REST APIs, Python, MySQL, MongoDB</p>
+            <h4>Data & Analytics</h4>
+            <p>Pandas, NumPy, ETL, Power BI, Star Schema</p>
           </div>
         </div>
         <div class="highlight-item">
           <div class="highlight-icon"><i class="fas fa-cloud"></i></div>
           <div>
-            <h4>Cloud & Tools</h4>
-            <p>Azure, AWS, Git, GitHub, Power BI, VS Code</p>
+            <h4>Languages & Tools</h4>
+            <p>Python, Java, SQL, PostgreSQL, MongoDB, Git</p>
           </div>
         </div>
       </div>
@@ -708,43 +781,61 @@
     <h2 class="section-title">Skills</h2>
     <div class="skills-categories">
       <div class="skill-category">
+        <h3>AI / ML</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Deep Learning</span>
+          <span class="skill-tag">CNNs</span>
+          <span class="skill-tag">YOLOv8</span>
+          <span class="skill-tag">MediaPipe</span>
+        </div>
+      </div>
+      <div class="skill-category">
         <h3>Languages</h3>
         <div class="skill-tags">
           <span class="skill-tag">Python</span>
           <span class="skill-tag">Java</span>
           <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">SQL</span>
         </div>
       </div>
       <div class="skill-category">
-        <h3>Frontend</h3>
+        <h3>Data & Analytics</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">ETL</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Star Schema</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Web & Tools</h3>
         <div class="skill-tags">
           <span class="skill-tag">React</span>
-          <span class="skill-tag">Tailwind CSS</span>
-          <span class="skill-tag">HTML5</span>
-          <span class="skill-tag">CSS3</span>
-          <span class="skill-tag">Leaflet.js</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>Backend & AI</h3>
-        <div class="skill-tags">
           <span class="skill-tag">Flask</span>
-          <span class="skill-tag">REST APIs</span>
-          <span class="skill-tag">OpenCV</span>
-          <span class="skill-tag">LLaMA</span>
-          <span class="skill-tag">Groq API</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>Database & Tools</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Tailwind CSS</span>
+          <span class="skill-tag">PostgreSQL</span>
           <span class="skill-tag">MongoDB</span>
           <span class="skill-tag">Git</span>
-          <span class="skill-tag">Power BI</span>
-          <span class="skill-tag">Azure</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">MySQL</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATION -->
+<section id="publication">
+  <div class="container">
+    <div class="section-label">Research</div>
+    <h2 class="section-title">Publication</h2>
+    <div class="publication-card">
+      <h3>Multi-Modal Edge–Cloud Framework for Urban Travel Safety Prediction with Risk and Route Optimization</h3>
+      <p>Accepted at an IEEE Conference, 2026. Camera-ready in preparation. Proposed CAMEC, a multi-modal framework combining computer vision (YOLOv8), temporal (LSTM), and tabular (XGBoost) models with an adaptive risk-learning module for real-time travel-safety prediction and safe-route recommendation.</p>
     </div>
   </div>
 </section>
@@ -757,12 +848,12 @@
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-header">
-          <div class="timeline-title">Microsoft Elevate Program Intern — AICTE</div>
-          <div class="timeline-date">Jan 2026 – Feb 2026</div>
+          <div class="timeline-title">Web Development Intern — BeeSkilled</div>
+          <div class="timeline-date">May 2026 – Jul 2026</div>
         </div>
         <ul>
-          <li>Completed a structured 6-week program covering Microsoft Azure fundamentals, cloud architecture, and AI-powered development tools.</li>
-          <li>Built a hands-on capstone project applying Azure services to a real-world problem statement.</li>
+          <li>Built a weather app in HTML, CSS, and JavaScript using a third-party weather API.</li>
+          <li>Worked on responsive UI implementation and API integration.</li>
         </ul>
       </div>
       <div class="timeline-item">
@@ -771,8 +862,7 @@
           <div class="timeline-date">Dec 2024</div>
         </div>
         <ul>
-          <li>Designed and delivered interactive Power BI dashboards to visualize business KPIs for a simulated client scenario.</li>
-          <li>Performed data cleaning and trend analysis; produced insights that guided fictional executive decision-making.</li>
+          <li>Cleaned and analyzed business datasets and built interactive Power BI dashboards tracking key KPIs.</li>
         </ul>
       </div>
       <div class="timeline-item">
@@ -781,8 +871,7 @@
           <div class="timeline-date">Jul 2024 – Aug 2024</div>
         </div>
         <ul>
-          <li>Implemented core banking features — account creation, deposit, withdrawal, and balance inquiry — using Java OOP principles.</li>
-          <li>Completed 5+ problem sets covering real-world banking scenarios, strengthening exception handling and data structures skills.</li>
+          <li>Built core banking modules in Java using OOP with exception handling and input validation.</li>
         </ul>
       </div>
     </div>
@@ -798,36 +887,34 @@
 
       <!-- FEATURED PROJECT -->
       <div class="project-card featured">
-        <span class="project-badge">🔥 Ongoing</span>
+        <span class="project-badge">Featured</span>
         <div class="project-body">
           <div>
             <div class="project-icon">🛡️</div>
             <h3>Chennai Travel Safety AI System</h3>
-            <p>A full-stack web application that scores any Chennai area out of 100 based on crime data, displays color-coded safety zones on an interactive map, and provides AI-powered travel guidance through a conversational assistant.</p>
+            <p>Full-stack app with a Flask REST API exposing /safety and /chat endpoints, scoring area safety out of 100 from crime-rate data across 20 zones.</p>
             <ul>
-              <li>Integrated LLaMA 3.3 via Groq API as an AI chat assistant for real-time travel safety queries</li>
-              <li>Interactive Leaflet.js map with Green/Orange/Red risk zones covering 20 Chennai areas</li>
-              <li>Flask REST API with /safety and /chat endpoints; CORS enabled for frontend integration</li>
-              <li>Rule-based safety scoring engine using crime rate zone data across all Chennai districts</li>
+              <li>Integrated a third-party LLM API (LLaMA 3.3 via Groq) as a conversational assistant</li>
+              <li>Built a responsive React frontend with an interactive Leaflet.js risk map</li>
+              <li>Applied CORS-enabled Flask endpoints for seamless frontend-backend integration</li>
             </ul>
           </div>
           <div>
             <div class="project-stack" style="margin-bottom:16px;">
               <span class="stack-tag">Python</span>
               <span class="stack-tag">Flask</span>
-              <span class="stack-tag">LLaMA 3.3</span>
-              <span class="stack-tag">Groq API</span>
+              <span class="stack-tag">React</span>
               <span class="stack-tag">Leaflet.js</span>
+              <span class="stack-tag">Groq API</span>
               <span class="stack-tag">JavaScript</span>
-              <span class="stack-tag">HTML/CSS</span>
             </div>
             <div style="background:rgba(124,106,255,0.06); border:1px solid var(--border); border-radius:12px; padding:20px;">
               <div style="font-size:0.75rem; color:var(--muted); margin-bottom:12px; text-transform:uppercase; letter-spacing:1px; font-weight:600;">Key Results</div>
               <div style="display:flex; flex-direction:column; gap:10px;">
-                <div style="font-size:0.82rem; color:var(--text);">✅ 20 Chennai zones mapped & tested</div>
-                <div style="font-size:0.82rem; color:var(--text);">✅ Safety API under 100ms response</div>
-                <div style="font-size:0.82rem; color:var(--text);">✅ AI chat live with Groq LLaMA</div>
-                <div style="font-size:0.82rem; color:var(--text);">✅ Built in 7 days from scratch</div>
+                <div style="font-size:0.82rem; color:var(--text);">✅ 20 zones covered by the safety model</div>
+                <div style="font-size:0.82rem; color:var(--text);">✅ Interactive map with color-coded risk levels</div>
+                <div style="font-size:0.82rem; color:var(--text);">✅ Conversational safety assistant integrated</div>
+                <div style="font-size:0.82rem; color:var(--text);">✅ Built as a complete full-stack prototype</div>
               </div>
             </div>
           </div>
@@ -836,17 +923,37 @@
 
       <div class="project-card">
         <div class="project-body">
-          <div class="project-icon">👤</div>
-          <h3>Face Recognition System</h3>
-          <p>Real-time face detection and recognition achieving ~90% accuracy on a 50-image dataset using OpenCV.</p>
+          <div class="project-icon">🔢</div>
+          <h3>Handwritten Digit Recognizer</h3>
+          <p>CNN-based digit recognizer trained on MNIST with a real-time draw-and-predict interface.</p>
           <ul>
-            <li>Applied histogram equalization and Gaussian blur preprocessing, reducing false positives by ~30%</li>
-            <li>Optimised to run at 20+ FPS on standard webcam using Haar Cascade classifier</li>
+            <li>Achieved 99% test accuracy using TensorFlow/Keras with dropout regularization</li>
+            <li>Implemented center-of-mass preprocessing to crop, resize, and recenter handwritten input for better predictions</li>
           </ul>
           <div class="project-stack">
             <span class="stack-tag">Python</span>
-            <span class="stack-tag">OpenCV</span>
-            <span class="stack-tag">NumPy</span>
+            <span class="stack-tag">TensorFlow/Keras</span>
+            <span class="stack-tag">Flask</span>
+            <span class="stack-tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-body">
+          <div class="project-icon">📊</div>
+          <h3>AI-Powered BI & Data Warehouse Platform</h3>
+          <p>End-to-end BI platform with automated ETL into a star-schema PostgreSQL warehouse and a React dashboard.</p>
+          <ul>
+            <li>Built a React + Chart.js dashboard showing revenue, profit, regional performance, and product analytics</li>
+            <li>Integrated role-based JWT authentication and a Groq LLM chatbot that converts plain-English questions to SQL</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Groq LLM</span>
           </div>
         </div>
       </div>
@@ -854,11 +961,11 @@
       <div class="project-card">
         <div class="project-body">
           <div class="project-icon">🎵</div>
-          <h3>Spotify Clone</h3>
-          <p>Pixel-accurate React SPA replicating Spotify's core UI — sidebar navigation, player controls, and playlist view.</p>
+          <h3>Spotify Clone Web App</h3>
+          <p>Responsive single-page app replicating Spotify's core UI with reusable React components.</p>
           <ul>
-            <li>Built 10+ reusable components with responsive breakpoints using Tailwind CSS</li>
-            <li>Mobile-first design with smooth transitions and hover effects</li>
+            <li>Built 10+ reusable React components across mobile, tablet, and desktop</li>
+            <li>Implemented responsive Tailwind CSS styling and polished hover states</li>
           </ul>
           <div class="project-stack">
             <span class="stack-tag">React</span>
@@ -868,23 +975,28 @@
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-body">
-          <div class="project-icon">🌐</div>
-          <h3>Personal Portfolio Website</h3>
-          <p>Responsive portfolio with smooth scroll navigation, mobile-first layout, and reusable React components.</p>
-          <ul>
-            <li>Structured into reusable React components with lazy rendering for faster load times</li>
-            <li>Clean component architecture — Navbar, ProjectCard, ContactForm</li>
-          </ul>
-          <div class="project-stack">
-            <span class="stack-tag">React</span>
-            <span class="stack-tag">Tailwind CSS</span>
-            <span class="stack-tag">JavaScript</span>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="container">
+    <div class="section-label">Highlights</div>
+    <h2 class="section-title">Coding & Achievements</h2>
+    <div class="achievement-grid">
+      <div class="achievement-card">
+        <h3>LeetCode</h3>
+        <p>265+ problems solved, 20-day streak, and a 50 Days badge.</p>
+      </div>
+      <div class="achievement-card">
+        <h3>HackerRank</h3>
+        <p>3-star SQL profile with verified Python, SQL, and Software Engineer Intern certifications.</p>
+      </div>
+      <div class="achievement-card">
+        <h3>Research</h3>
+        <p>IEEE conference paper accepted in 2026, with camera-ready preparation in progress.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -899,7 +1011,7 @@
         <div class="year">2023 – PRESENT</div>
         <h3>B.Tech — Artificial Intelligence & Data Science</h3>
         <div class="institution">St. Joseph's College of Engineering, Chennai</div>
-        <div class="grade">CGPA: 8.12 / 10</div>
+        <div class="grade">CGPA: 8.08 / 10</div>
       </div>
       <div class="edu-card">
         <div class="year">2022 – 2023</div>
@@ -918,28 +1030,20 @@
     <h2 class="section-title">Certifications</h2>
     <div class="certs-grid">
       <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+        <span>NPTEL — Introduction to Machine Learning (Elite)</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-database"></i></div>
+        <span>NPTEL — Database Management Systems (Elite)</span>
+      </div>
+      <div class="cert-card">
         <div class="cert-icon"><i class="fab fa-meta"></i></div>
-        <span>Meta Front-End Developer Professional Certificate</span>
+        <span>Meta FrontEnd Developer</span>
       </div>
       <div class="cert-card">
         <div class="cert-icon"><i class="fab fa-aws"></i></div>
         <span>AWS Cloud Practitioner Essentials</span>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
-        <span>NPTEL – Introduction to Machine Learning (Elite Grade)</span>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon"><i class="fas fa-chart-bar"></i></div>
-        <span>Tata Data Visualization — Forage</span>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon"><i class="fas fa-briefcase"></i></div>
-        <span>Deloitte Data Analytics Virtual Simulation — Forage</span>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon"><i class="fas fa-robot"></i></div>
-        <span>AI Fluency: AI Capabilities & Limitations — Anthropic</span>
       </div>
     </div>
   </div>
@@ -951,7 +1055,7 @@
     <div class="contact-inner">
       <div class="section-label" style="text-align:center;">Let's Talk</div>
       <h2 class="section-title">Get In Touch</h2>
-      <p>I'm open to internships, collaborations, and full-time opportunities. Feel free to reach out!</p>
+      <p>Open to internships, AI/ML roles, and full-time opportunities. Reach out if you'd like to collaborate or discuss opportunities in Cognizant NPN AI & Analytics.</p>
       <div class="contact-links">
         <a href="mailto:thenmozhimurugan984@gmail.com" class="contact-link">
           <i class="fas fa-envelope"></i> thenmozhimurugan984@gmail.com
@@ -965,13 +1069,19 @@
         <a href="#" class="contact-link">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
+        <a href="#" class="contact-link">
+          <i class="fas fa-code"></i> LeetCode
+        </a>
+        <a href="#" class="contact-link">
+          <i class="fas fa-trophy"></i> HackerRank
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Murugan A — Built with care in Chennai 🇮🇳</p>
+  <p>© 2026 Murugan A — Built with care in Chennai</p>
 </footer>
 
 <script>
